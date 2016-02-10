@@ -74,7 +74,13 @@
                         </ul>
                     </li>
                     @if (! Auth::guest())
-                        <li><a href="{{ url('/admin') }}">Administração</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Admin <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="{{ url('/auth/user') }}">Usuarios</a></li>
+                                <li><a href="{{ url('/auth/permiss') }}">Permissões</a></li>
+                            </ul>
+                        </li>
                     @endif
                 </ul>
 
